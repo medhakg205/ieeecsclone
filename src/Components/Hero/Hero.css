@@ -1,23 +1,15 @@
 
-  .hero-text {
-  font-family: "GoogleSansFlex", sans-serif;
-  font-size: 96px;
-  font-weight: 700;
+.hero-text,
+#hero-1 h1,
+#hero-2 h1,
+#hero-3 h1 {
+  font-size: clamp(36px, 8vw, 83px);
 }
-
-.hero-text .white {
-  color: white;
-}
-
-.hero-text .brown {
-  color: #341c0b; /* dark brown */
-}
-
-
 
 #hero-1 {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 
   display: flex;
@@ -36,14 +28,12 @@
 
   z-index: 1;
 }
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
+
 
 #hero-2 {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 
   display: flex;
@@ -62,14 +52,12 @@
 
   z-index: 1;
 }
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
+
 
 #hero-3 {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 
   display: flex;
@@ -100,20 +88,20 @@
   font-weight: 500;
   text-align: center;
 
-  /* Gradient for multi-colored letters */
+ 
   background: linear-gradient(
     to right,
-    #151515 0%,   /* dark brown starts */
-    #151515 12%,   /* covers F */
-    #ffffff 7%,   /* rest white */
-    #ffffff 89%,  /* up to end of “y” */
-    #151515 85%,  /* question mark brown */
+    #151515 0%,   
+    #3a0707 12%,   
+    #ffffff 7%,   
+    #ffffff 89%,  
+    #151515 85%,  
     #151515 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for non-webkit browsers */
+  background-clip: text; 
 }
 #hero-2 h1 {
   font-family: "Inter", sans-serif;
@@ -121,20 +109,20 @@
   font-weight: 500;
   text-align: center;
 
-  /* Gradient for multi-colored letters */
+  
   background: linear-gradient(
     to right,
-    #151515 0%,   /* dark brown starts */
-    #151515 25%,   /* covers F */
-    #ffffff 7%,   /* rest white */
-    #ffffff 79%,  /* up to end of “y” */
-    #151515 20%,  /* question mark brown */
+    #151515 0%,   
+    #151515 25%,   
+    #ffffff 7%,   
+    #ffffff 79%,  
+    #151515 20%,  
     #151515 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for non-webkit browsers */
+  background-clip: text; 
 }
 #hero-3 h1 {
   font-family: "Inter", sans-serif;
@@ -142,28 +130,35 @@
   font-weight: 500;
   text-align: center;
 
-  /* Gradient for multi-colored letters */
+  
   background: linear-gradient(
     to right,
-    #151515 0%,   /* dark brown starts */
-    #151515 25%,   /* covers F */
-    #ffffff 7%,   /* rest white */
-    #ffffff 75%,  /* up to end of “y” */
-    #151515 75%,  /* question mark brown */
+    #151515 0%, 
+    #151515 25%,  
+    #ffffff 7%,   
+    #ffffff 75%,  
+    #151515 75%,  
     #151515 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for non-webkit browsers */
+  background-clip: text; 
 }
 
 body {
   margin: 0;
   font-family: Inter, sans-serif;
 }
+#bg1, #bg2, #bg3 {
+  background-size: cover;
+}
 
-
+@media (min-width: 768px) {
+  #bg1, #bg2, #bg3 {
+    background-size: contain;
+  }
+}
 
 
 /* NAVBAR */

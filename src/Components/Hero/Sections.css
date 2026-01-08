@@ -44,3 +44,96 @@
   position: relative;   /* REQUIRED */
   z-index: 10;          /* <-- your z-index */
 }
+.sections {
+  width: 100%;
+}
+
+.section-part {
+  width: 100vw;
+  height: 100vh;      /* full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;   /* clean edges */
+  padding: 40px;
+  box-sizing: border-box;
+}
+.sections {
+  width: 100%;
+}
+
+.section-part {
+  width: 100vw;
+  height: 100vh;          /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.section-image img {
+  max-width: 60%;
+  height: auto;
+}
+
+.section-strips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.strip {
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.sections {
+  width: 100%;
+}
+
+.section-part {
+  width: 100vw;
+  height: 100vh;          /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.section-number {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-image img {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.section-strips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.strip {
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}

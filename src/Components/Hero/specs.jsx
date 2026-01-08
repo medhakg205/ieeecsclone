@@ -20,41 +20,46 @@ export default function Specs() {
   const containerRef = useRef(null);
 useEffect(() => {
   const container = containerRef.current;
-  const cardsEl = container.querySelectorAll(".cardstack"); // Gets ALL 7 cards
-  console.log("Found cards:", cardsEl.length); // DEBUG: Should log 7
+  const cardsEl = container.querySelectorAll(".cardstack");
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: container,
-      start: "top top",
-      end: "bottom top",
-      scrub: 1,
-      pin: true,
-      pinSpacing: true,
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: container,
+    start: "top top",
+    end: "bottom+=200 top",
+    scrub: 1,
+    pin: true,
+    pinSpacing: true,
+  });
+
+  gsap.fromTo(
+    cardsEl,
+    {
+      opacity: 0,
+      y: 150,          // start from right
+      rotate: 5        // small tilt
+    },
+    {
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      stagger: 0.25,   // one by one
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: container,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1
+      }
     }
-  });
-
-  // FIXED: Animate ALL 7 cards (0-6 indices)
-  cardsEl.forEach((card, index) => {
-    const startTime = index * 0.12; // Slightly faster stagger
-    const yDistance = -15 * (index + 1);
-    
-    tl.fromTo(card, 
-      { y: "0%", scale: 1, rotation: 0 },
-      {
-        y: `${yDistance}px`,
-        scale: 0.96 - (index * 0.015),
-        rotation: index * -0.5,
-        duration: 0.4,
-        ease: "power2.out"
-      }, startTime
-    );
-  });
+  );
 
   return () => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    ScrollTrigger.getAll().forEach((t) => t.kill());
   };
 }, []);
+
 
 
   return (

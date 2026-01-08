@@ -25,7 +25,7 @@ const sectionsData = [
   },
 ];
 
-export default function Section() {
+export default function Sections() {
   return (
     <div className="sections">
       {sectionsData.map((section, idx) => (
@@ -37,26 +37,32 @@ export default function Section() {
 
 function SectionPart({ data }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, { margin: "-20% 0px" }); // animate every time
 
   return (
     <div className="section-part" ref={ref}>
       <div className="section-number">{data.number}</div>
+
       <div className="section-image">
         <img src={data.image} alt={`section-${data.number}`} />
       </div>
+
       <div className="section-strips">
-        {data.strips.map((strip, i) => (
-          <motion.div
-            key={i}
-            className="strip"
-            initial={{ x: i === data.strips.length - 1 ? 100 : 0, opacity: i === data.strips.length - 1 ? 0 : 1 }}
-            animate={{ x: inView && i === data.strips.length - 1 ? 0 : 0, opacity: inView && i === data.strips.length - 1 ? 1 : 1 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          >
-            {strip}
-          </motion.div>
-        ))}
+        {data.strips.map((strip, i) => {
+          const isLast = i === data.strips.length - 1;
+
+          return (
+            <motion.div
+              key={i}
+              className="strip"
+              initial={{ y: isLast ? 100 : 0, opacity: isLast ? 0 : 1 }}
+              animate={inView ? { y: 0, opacity: 1 } : { y: isLast ? 100 : 0, opacity: isLast ? 0 : 1 }}
+              transition={{ type: "spring", stiffness: 50, damping: 15 }}
+            >
+              {strip}
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );

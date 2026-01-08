@@ -9,13 +9,13 @@ const Hero = () => {
       whileInView="visible"
       viewport={{ amount: 0.4 }}
     >
-      {/* Background image – NORMAL scroll */}
+      
       <div
         className="hero-bg"
         id="bg3"
       />
 
-      {/* Text – slides UP */}
+      
       <motion.div
         className="hero-content"
         variants={{

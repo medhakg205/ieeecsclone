@@ -1,44 +1,38 @@
-.scroll-wrapper {
-  height: 200vh; /* enough space to scroll */
-}
-
-.big-card-container {
-  position: relative;
+.cards-section {
   width: 100%;
-  margin: 0 auto;
-  height: 100vh; /* container fills viewport */
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
 .card {
-  position: absolute;
-  width: 100%;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  top: 0;
+  width: 70%;
+  max-width: 600px;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
 }
 
-.card:nth-child(1) {
-  height: 400px;
+.card.white {
+  background: #ffffff;
 }
 
-.card:nth-child(2),
-.card:nth-child(3),
-.card:nth-child(4) {
-  height: 250px;
-}
-.card:nth-child(1) {
-  top: 400px;   /* card 1 at top */
+.card.yellow {
+  background: #ffd93d;
 }
 
-.card:nth-child(2) {
-  top: 440px;  /* push card 2 below card 1 */
+.card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.card:nth-child(3) {
-  top: 480px;  /* push card 3 below card 2 */
-}
-
-.card:nth-child(4) {
-  top: 520px;  /* push card 4 below card 3 */
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
 }
