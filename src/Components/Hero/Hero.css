@@ -3,7 +3,11 @@
 #hero-1 h1,
 #hero-2 h1,
 #hero-3 h1 {
-  font-size: clamp(36px, 8vw, 83px);
+  letter-spacing: -0.05em;
+  font-size: clamp(36px, 8vw, 97px);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 
 #hero-1 {
@@ -83,20 +87,16 @@
 
 
 #hero-1 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 83px;
-  font-weight: 500;
-  text-align: center;
 
  
   background: linear-gradient(
     to right,
-    #151515 0%,   
+    #3a0707 0%,   
     #3a0707 12%,   
     #ffffff 7%,   
     #ffffff 89%,  
-    #151515 85%,  
-    #151515 100%
+    #3a0707 85%,  
+    #3a0707 100%
   );
 
   -webkit-background-clip: text;
@@ -104,20 +104,17 @@
   background-clip: text; 
 }
 #hero-2 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 83px;
-  font-weight: 500;
-  text-align: center;
+
 
   
   background: linear-gradient(
     to right,
-    #151515 0%,   
-    #151515 25%,   
+    #3a0707 0%,   
+    #3a0707 23%,   
     #ffffff 7%,   
-    #ffffff 79%,  
-    #151515 20%,  
-    #151515 100%
+    #ffffff 77%,  
+    #3a0707 20%,  
+    #3a0707 100%
   );
 
   -webkit-background-clip: text;
@@ -125,20 +122,16 @@
   background-clip: text; 
 }
 #hero-3 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 83px;
-  font-weight: 500;
-  text-align: center;
 
   
   background: linear-gradient(
     to right,
-    #151515 0%, 
-    #151515 25%,  
+    #3a0707 0%, 
+    #3a0707 26.4%,  
     #ffffff 7%,   
-    #ffffff 75%,  
-    #151515 75%,  
-    #151515 100%
+    #ffffff 74%,  
+    #3a0707 74%,  
+    #3a0707 100%
   );
 
   -webkit-background-clip: text;
@@ -215,6 +208,25 @@ body {
 .navbar .cta:hover {
   background: #ffca28;
 }
+.solution-title {
+  font-size: clamp(48px, 18vw, 210px); /* scales between 48px on mobile and 210px on desktop */
+  letter-spacing: -0.05em;
+}
+.video-wrapper {
+  width: clamp(280px, 60vw, 560px);   /* min width 280px, max 560px */
+  height: auto;                       /* height follows width automatically */
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.solution-panel {
+  width: clamp(200px, 80vw, 140vw);
+  height: clamp(200px, 50vw, 800px);
+}
+
 .solution-section {
   position: relative;
   min-height: 140vh;
@@ -227,23 +239,24 @@ body {
 
 /* Title */
 .solution-title {
+  letter-spacing: -0.05em;
   font-family: "Inter", sans-serif;
   font-size: 210px;
   font-weight: 550;
   color: #ff4d00;
   z-index: 2;
+  
 }
 
 /* Video */
 .video-wrapper {
-  height: 500px;
-  aspect-ratio: 9 / 15;
-  background: white;
-  border-radius: 14px;
+  background: transparent;
+  border-radius: none;
   overflow: hidden;
   position: relative;
+  top:55%;
   z-index: 3;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .video-wrapper {
@@ -251,7 +264,7 @@ body {
   height: 600px;          /* ⬅ fixed height (crops bottom) */
   overflow: hidden;      /* ⬅ REQUIRED */
 
-  background: white;
+  background: transparent;
   border-radius: 16px;
   position: relative;
   z-index: 1;
@@ -270,9 +283,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 140vw;
+  width: 135vw;
   height: 800px;
-  background: white; /* force pure white */
+  background-color: rgba(255, 255, 255, 0.95); /* force pure white */
  
 
   
@@ -295,27 +308,26 @@ body {
   right: 5px;
   bottom: 5px;
 
-  max-width: 320px;
+  max-width: 330px;
   padding: 24px;
 
-  background: white;
-  border-radius: 14px;
+  background: transparent;
+  border-radius: none;
   z-index: 1;
 
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+  box-shadow:none;
 }
 
-.solution-text-box h4 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #111;
-}
+
 
 .solution-text-box p {
   font-size: 15px;
   line-height: 1.5;
-  color: #444;
+  font-weight: 500;
+  color: #280303;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  
 }
 
 /* Gradient background */
@@ -333,7 +345,14 @@ body {
   filter: blur(20px);
   z-index: 0;
 }
-
+.panel-title {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 600;
+  color: #341c0b; /* dark brown */
+  text-align: center;
+  margin: 0;
+}
 .functions-section {
   position: relative;
   min-height: 150vh;

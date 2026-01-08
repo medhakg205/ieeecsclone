@@ -44,7 +44,7 @@ const Hero = () => {
           },
         }}
       >
-        <h1 className="hero-text">Feeling Lonely?</h1>
+        <h1 className="hero-text">Feeling lonely?</h1>
       </motion.div>
     </motion.main>
   );
