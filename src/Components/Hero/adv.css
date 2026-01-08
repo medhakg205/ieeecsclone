@@ -1,0 +1,44 @@
+.scroll-wrapper {
+  height: 200vh; /* enough space to scroll */
+}
+
+.big-card-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh; /* container fills viewport */
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  top: 0;
+}
+
+.card:nth-child(1) {
+  height: 400px;
+}
+
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+  height: 250px;
+}
+.card:nth-child(1) {
+  top: 400px;   /* card 1 at top */
+}
+
+.card:nth-child(2) {
+  top: 440px;  /* push card 2 below card 1 */
+}
+
+.card:nth-child(3) {
+  top: 480px;  /* push card 3 below card 2 */
+}
+
+.card:nth-child(4) {
+  top: 520px;  /* push card 4 below card 3 */
+}

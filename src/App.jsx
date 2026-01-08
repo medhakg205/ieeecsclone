@@ -4,8 +4,15 @@ import Hero2 from "./Components/Hero/Hero2";
 import Hero3 from "./Components/Hero/Hero3";
 import SolutionSection from "./Components/Hero/SolutionSection";
 import FunctionsSection from "./Components/Hero/FunctionsSection";
-import Advantages from "./Components/Hero/Advantages";
+//import Advantages from "./Components/Hero/Advantages";
 import Navbar from "./Components/Hero/Navbar";
+import Chain from "./Components/Hero/chain"
+import CardStack from "./Components/Hero/Advantages";
+import Specs from "./Components/Hero/specs";
+import Section from "./Components/Hero/sections";
+//import Advantages from "./Components/Hero/Advantages";
+
+
 const App=()=>{
   return <div className="overflow-x-hidden"><Hero />
   <Hero2 />
@@ -13,7 +20,12 @@ const App=()=>{
   <Navbar />
   <SolutionSection />
   <FunctionsSection />
-  <Advantages />
+  <CardStack />
+  <Chain />
+  <Specs />
+  <Section />
+  
+  
   
   
   </div>

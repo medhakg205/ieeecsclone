@@ -1,0 +1,46 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding: 50px;
+}
+
+.section-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-number {
+  font-size: 4rem;
+  font-weight: bold;
+  flex: 0 0 100px;
+}
+
+.section-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.section-strips {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.strip {
+  background: #fff;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff6a00;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.section-part {
+  position: relative;   /* REQUIRED */
+  z-index: 10;          /* <-- your z-index */
+}

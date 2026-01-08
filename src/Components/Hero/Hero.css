@@ -10,7 +10,7 @@
 }
 
 .hero-text .brown {
-  color: #150b04; /* dark brown */
+  color: #341c0b; /* dark brown */
 }
 
 
@@ -220,66 +220,125 @@ body {
 .navbar .cta:hover {
   background: #ffca28;
 }
-/* SOLUTION SECTION */
 .solution-section {
   position: relative;
-  min-height: 120vh;
-
+  min-height: 140vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-
   padding-top: 140px;
   overflow: hidden;
 }
 
-
+/* Title */
 .solution-title {
   font-family: "Inter", sans-serif;
   font-size: 210px;
   font-weight: 550;
   color: #ff4d00;
-  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+/* Video */
+.video-wrapper {
+  height: 500px;
+  aspect-ratio: 9 / 15;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
 }
 
 .video-wrapper {
-  width: 420px;
-  aspect-ratio: 16 / 9;
+  width: 560px;
+  height: 600px;          /* ⬅ fixed height (crops bottom) */
+  overflow: hidden;      /* ⬅ REQUIRED */
 
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
-
+  border-radius: 16px;
   position: relative;
   z-index: 1;
 }
-
 .video-wrapper video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  object-position: center -12%; /* ⬅ moves video UP */
 }
 
+
+/* 🔥 White expanding panel */
+.solution-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140vw;
+  height: 800px;
+  background: white; /* force pure white */
+ 
+
+  
+  border-radius: 24px;
+
+  
+  transform-origin: center;
+  
+  transform-origin: center center;
+
+
+  z-index: 1;
+
+ 
+}
+
+/* Bottom-right text box */
+.solution-text-box {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+
+  max-width: 320px;
+  padding: 24px;
+
+  background: white;
+  border-radius: 14px;
+  z-index: 1;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.solution-text-box h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.solution-text-box p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Gradient background */
 .solution-bg {
   position: absolute;
   inset: 0;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255, 165, 60, 0.55) 0%,
-      rgba(255, 165, 60, 0.35) 25%,
-      rgba(255, 165, 60, 0.18) 45%,
-      rgba(255, 165, 60, 0.08) 60%,
-      #fff7ec 75%
-    );
-
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
   filter: blur(20px);
   z-index: 0;
 }
+
 .functions-section {
   position: relative;
   min-height: 150vh;
@@ -488,76 +547,318 @@ body {
   background: transparent;
   backdrop-filter: blur(6px);
 }
-.advantages {
+.chain-section {
   position: relative;
-  height: 500vh;
+  height: 200vh; /* enough to scroll */
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 165, 60, 0.55),
-    rgba(255, 165, 60, 0.15)
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
   );
+  overflow-x: hidden;
 }
 
-/* Each sticky frame */
-.card-wrapper {
+.chain-title {
   position: sticky;
-  top: 0;
-  height: 100vh;
-
-  /* 🔥 tighter vertical spacing */
-  padding: 200px 80px;
-  box-sizing: border-box;
-}
-
-/* Title layer */
-.adv-title {
-  font-size: 52px;
+  top: 20%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff7f00; /* orange */
+  z-index: 1;
   font-weight: 700;
+}
 
-  /* 🔥 closer to card */
-  margin-bottom: 24px;
-
+.chain-cards-container {
   position: relative;
-  z-index: 10;
+  width: 100%;
+  height: 100%;
 }
 
-/* Title colors */
-.adv-title.yellow {
-  color: #fff2c6;
-}
-
-.adv-title.white {
-  color: #ffffff;
-}
-
-/* Sliding card */
-.adv-card {
+.chain-card {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  /* 🔥 slightly shorter = tighter feel */
-  height: 60vh;
-
-  padding: 48px 72px;
-  box-sizing: border-box;
-
-  z-index: 5;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Card colors */
-.adv-card.yellow {
-  background: #fff2c6;
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
 }
 
-.adv-card.white {
-  background: #ffffff;
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #150b04; /* dark brown text */
+}
+.chain-section {
+  position: relative;
+  height: 200vh;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  overflow-x: hidden;
+  padding: 100px 20px;
+}
+.chain-title {
+  position: sticky;
+  top: 20%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff7f00;
+  z-index: 1; /* Low z-index so cards (z-index 10+) overlap it [web:10] */
+  font-weight: 700;
 }
 
-/* Text */
-.adv-text {
-  font-size: 20px;
-  max-width: 560px;
-  line-height: 1.55;
+chain-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+.chain-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px; /* Wider for better spacing perception [web:19] */
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 10; /* High base z-index to appear over title; motion zIndex stacks them [web:10][web:13] */
+}
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #150b04;
+}
+.chain-section {
+  position: relative;
+  height: 200vh; /* enough space for scroll */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  overflow-x: hidden;
+  padding: 100px 20px;
+}
+
+.chain-title {
+  position: sticky;
+  top: 20%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff7f00;
+  z-index: 1; /* title under cards */
+  font-weight: 700;
+}
+
+.chain-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chain-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.chain-section {
+  position: relative;
+  padding: 200px 20px; /* give room for title */
+  height: 100vh; /* or whatever fits your scroll */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 100%
+  );
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.chain-title {
+  position: relative;
+  z-index: 1; /* below cards */
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chain-cards-container {
+  position: absolute; /* let cards float over text */
+  top: 50%; /* roughly center vertically over title */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 200px; /* adjust based on card size */
+  pointer-events: none; /* cards don’t block scroll */
+}
+
+.chain-card {
+  position: absolute; /* stack horizontally over each other */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chain-card img {
+  width: 80px; /* adjust */
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+.chain-title {
+  position: relative;
+  z-index: 1; /* LOWER z-index than cards */
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chain-cards-container {
+  position: absolute; /* float cards over everything */
+  top: 50%;           /* adjust to align with title vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 2; /* HIGHER than title so cards are on top */
+}
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* strips at top, content below */
+  border-radius: 0; /* optional: remove rounded corners for full screen */
+  overflow: hidden;
+  box-shadow: none; /* optional: remove shadow for full screen */
+}
+
+.strips {
+  display: flex;
+  flex-direction: column;
+}
+
+.strip {
+  padding: 20px 30px; /* slightly bigger for full-screen cards */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-content {
+  padding: 30px;
+  flex-grow: 1; /* make content fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically */
+}
+
+.card-content h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+.chain-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 80px; /* <-- this adds vertical spacing between cards */
+}
+
+.chain-card {
+  width: 300px;
+  min-height: 200px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.chain-section {
+  min-height: 200vh;   /* Gives enough scroll area so cards don’t overlap */
+  position: relative;
+  padding-top: 10vh;   /* optional, spacing for title */
+  overflow: hidden;    /* VERY important: prevents cards from leaking upward */
+}
+.chain-title {
+  position: absolute;
+  top: 600px;        /* move title down */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
