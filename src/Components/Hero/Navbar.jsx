@@ -22,7 +22,7 @@ const opacity = useTransform(scrollYProgress, [0.6, 0.95], [0, 1]);
 >
   <a href="#solution">About</a>
   <a href="#functions">Functions</a>
-  <a href="#advantages">Advantages</a>
+  <a href="#adv">Advantages</a>
   <a href="#specs">Specifications</a>
   <a href="#preorder" className="cta">Pre-order</a>
 </motion.nav>
