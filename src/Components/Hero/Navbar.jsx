@@ -6,8 +6,18 @@ const Navbar = () => {
 
   // Nav appears after hero fades
   
-  const scaleX = useTransform(scrollYProgress, [0.6, 0.95], [0, 1]);
-const opacity = useTransform(scrollYProgress, [0.6, 0.95], [0, 1]);
+  const opacity = useTransform(
+  scrollYProgress,
+  [0.08, 0.11, 0.18, 0.2],   
+  [0,    1,    1,    0]       
+);
+
+const scaleX = useTransform(
+  scrollYProgress,
+  [0.07, 0.10, 0.30, 0.40],
+  [0,    1,    1,    0]
+);
+
 
 
   return (
