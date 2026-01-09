@@ -7,13 +7,13 @@ import demoGif from './your-gif.gif'; // Replace with your GIF path
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  { id: 1, color: "#ffffff", title: "Card 1", text: "This is card one." },
-  { id: 2, color: "#FFD93D", title: "Card 2", text: "This is card two." },
-  { id: 3, color: "#ffffff", title: "Card 3", text: "This is card three." },
-  { id: 4, color: "#FFD93D", title: "Card 4", text: "This is card four." },
-  { id: 5, color: "#ffffff", title: "Card 5", text: "This is card five." },
-  { id: 6, color: "#FFD93D", title: "Card 6", text: "This is card six." },
-  { id: 7, color: "#ffffff", title: "Card 7", text: "This is card seven." },
+  { id: 1, color: "#ffffff", title: "Form factor", text: "Miniature brooch (60x40x10 mm)\nMagnetic attachment to clothing\nWeight: up to 50 g" },
+  { id: 2, color: "#FFD93D", title: "Display", text: "No visible screen, e-ink type display\nHidden matte display for auxiliary indications only" },
+  { id: 3, color: "#ffffff", title: "Audio", text: "Noise-canceling microphone\nUltra-directional speaker with counterbalance for sound privacy" },
+  { id: 4, color: "#FFD93D", title: "Companion", text: "Bluetooth 5.2\nWi-Fi 6 (802.11ax)\neSIM support / synchronization with smartphon" },
+  { id: 5, color: "#ffffff", title: "AI Features", text: "TNeural model trained on data from open psychological support lines\nEmotional tone recognition\nReal-time responsive suggestions and replies\nIntegration with conversation history" },
+  { id: 6, color: "#FFD93D", title: "Privacy and Security", text: "Full data encryption\nPartial on-device processing\nAnonymous conversation mode" },
+  { id: 7, color: "#ffffff", title: "Battery", text: "Battery life: up to 48 hours\nCharging: USB-C / magnetic contact dock" },
 ];
 
 export default function Specs() {
@@ -63,11 +63,11 @@ useEffect(() => {
 
 
   return (
-    <div className="scroll-wrapper">
+    <div id="specs" className="scroll-wrapper">
       <div className="layout-container" ref={containerRef}>
         {/* LEFT SIDE - GIF + HEADING */}
         <div className="left-column">
-          <h2 className="left-heading">Visual Demo</h2>
+          <h2 className="left-heading">Specifications</h2>
           <img src={demoGif} alt="Demo" className="demo-gif" />
         </div>
 

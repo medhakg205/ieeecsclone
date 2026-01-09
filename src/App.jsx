@@ -9,7 +9,6 @@ import Navbar from "./Components/Hero/Navbar";
 import Chain from "./Components/Hero/chain"
 import CardStack from "./Components/Hero/Advantages";
 import Specs from "./Components/Hero/specs";
-import Section from "./Components/Hero/sections";
 import NavSection from "./Components/Hero/FullSection";
 //import Advantages from "./Components/Hero/Advantages";
 
@@ -24,7 +23,6 @@ const App=()=>{
   <CardStack />
   <Chain />
   <Specs />
-  <Section />
   <NavSection />
   
   

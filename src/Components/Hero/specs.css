@@ -26,15 +26,13 @@
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .demo-gif {
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 /* RIGHT SIDE */
@@ -138,3 +136,87 @@
   margin-bottom: 1rem; /* reduce from 2rem */
 }
 
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column; /* stack vertically */
+    height: auto;
+    padding: 2rem 1rem;
+    align-items: center; /* center children */
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .demo-gif {
+    max-width: 100%;
+    height: 3000px;
+  }
+
+  .right-heading, .left-heading {
+    text-align: center;
+  }
+}
+.layout-container {
+  align-items: flex-start; /* instead of center */
+}
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* ← this aligns content to left */
+}
+.cardstack p {
+  white-space: pre-line; /* <-- preserves newlines */
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+.cardstack {
+  margin: 0; /* removes all gaps */
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 0px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.demo-gif {
+  width: 700px;
+  height: 400px; /* keeps aspect ratio */
+}
+.layout-container {
+  height: auto; /* let content define height */
+  min-height: 100vh; /* at least full screen */
+  overflow: visible; /* prevent cropping */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* start from top */
+  padding: 4rem;
+}
+.layout-container {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  background-size: cover; /* stretch to fill container */
+  background-repeat: no-repeat;
+}
+.layout-container {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 100%  /* change from 75% → 100% */
+  );
+  background-size: 100% 100%; /* fill the container completely */
+  background-repeat: no-repeat;
+}

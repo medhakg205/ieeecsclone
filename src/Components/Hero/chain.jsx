@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import "./Hero.css";
+import "./Chain.css";
 
 const cardsData = [
   {
@@ -42,10 +42,10 @@ export default function Chain() {
   );
 
   return (
-    <section ref={ref} className="chain-section">
+    <section id="forwhom" ref={ref} className="chain-section">
       <h1 className="chain-title">Companion is for everyone</h1>
 
-      <div className="chain-cards-container">
+      <div  className="chain-cards-container">
         {cardsData.map((card, i) => (
           <motion.div
             key={i}

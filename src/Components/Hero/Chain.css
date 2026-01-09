@@ -1,0 +1,321 @@
+.chain-section {
+  position: relative;
+  height: 200vh; /* enough to scroll */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  overflow-x: hidden;
+}
+
+.chain-title {
+  position: sticky;
+  top: 20%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff7f00; /* orange */
+  z-index: 1;
+  font-weight: 700;
+}
+
+.chain-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chain-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #150b04; /* dark brown text */
+}
+.chain-section {
+  position: relative;
+  height: 200vh;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  overflow-x: hidden;
+  padding: 100px 20px;
+}
+
+
+chain-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.chain-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px; 
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 10; /* High base z-index to appear over title; motion zIndex stacks them [web:10][web:13] */
+}
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #150b04;
+}
+.chain-section {
+  position: relative;
+  height: 200vh; /* enough space for scroll */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 45%,
+    rgba(255, 165, 60, 0.08) 60%,
+    #fff7ec 75%
+  );
+  overflow-x: hidden;
+  padding: 100px 20px;
+}
+
+.chain-title {
+  position: sticky;
+  top: 20%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff7f00;
+  z-index: 1; /* title under cards */
+  font-weight: 700;
+}
+
+.chain-cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chain-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.chain-card-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.chain-section {
+  position: relative;
+  padding: 200px 20px; /* give room for title */
+  height: 100vh; /* or whatever fits your scroll */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 165, 60, 0.55) 0%,
+    rgba(255, 165, 60, 0.35) 25%,
+    rgba(255, 165, 60, 0.18) 100%
+  );
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.chain-title {
+  position: relative;
+  z-index: 1; /* below cards */
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chain-cards-container {
+  position: absolute; /* let cards float over text */
+  top: 50%; /* roughly center vertically over title */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 200px; /* adjust based on card size */
+  pointer-events: none; /* cards don’t block scroll */
+}
+
+.chain-card {
+  position: absolute; /* stack horizontally over each other */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chain-card img {
+  width: 80px; /* adjust */
+  margin-top: 10px;
+}
+
+.chain-card-title {
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+.chain-title {
+  position: relative;
+  z-index: 1; /* LOWER z-index than cards */
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.chain-cards-container {
+  position: absolute; /* float cards over everything */
+  top: 50%;           /* adjust to align with title vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 2; /* HIGHER than title so cards are on top */
+}
+
+
+.chain-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 80px; /* <-- this adds vertical spacing between cards */
+}
+.chain-card {
+  width: 350px;
+  min-height: 350px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* top align */
+  padding: 10px;
+  gap: 10px;
+}
+
+.chain-card-title {
+  font-size: 1rem;  /* smaller text */
+  margin: 0;         /* remove spacing pushing text down */
+  text-align: center;
+}
+
+.chain-card-content img {
+  width: 60%;        /* bigger image */
+  height: auto;
+  margin-top: 5px;
+  display: block;
+  border-radius: 12px;
+}
+
+.chain-card {
+  width: 300px;
+  min-height: 200px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.chain-section {
+  min-height: 200vh;   /* Gives enough scroll area so cards don’t overlap */
+  position: relative;
+  padding-top: 10vh;   /* optional, spacing for title */
+  overflow: hidden;    /* VERY important: prevents cards from leaking upward */
+}
+.chain-title {
+  position: absolute;
+  top: 600px;        /* move title down */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  font-weight: 600;
+  font-size: 50px;
+  color: #dc5f21;
+  letter-spacing: -3px;
+}
+.chain-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: flex-start; 
+  padding: 10px;            
+  gap: 10px;      }          
+.chain-card-content img {
+  width: 70%;
+  height: auto;
+  margin: 5px auto 0 auto; 
+  display: block;
+  border-radius: 12px;
+}
+.chain-card-content img {
+  width: 200px;   
+  height: 200px;  
+  object-fit: cover; 
+  border-radius: 12px;
+  display: block;
+  margin: 5px auto 0 auto; 
+}
+.chain-card-content p {
+  font-size: 2rem;}
+  .chain-card-title {
+  font-size: clamp(1rem, 1.8vw, 1.2rem); 
+  margin: 0;
+  text-align: left;
+}

@@ -9,9 +9,9 @@ const NavSection = () => {
         <a href="#solution">about</a>
         <a href="#functions">functions</a>
         <a href="#adv">advantages</a>
-        <a href="#for-whom">for whom</a>
+        <a href="#forwhom">for whom</a>
         <a href="#how">how does it work</a>
-        <a href="#technologies">technologies</a>
+        <a href="#specs">technologies</a>
       </div>
 
       <h1 className="nav-background-text">companion</h1>
