@@ -1,6 +1,6 @@
 import React from "react";
 import "./FullSection.css";
-import sampleVideo from "/my-video.mp4"; // replace with your video path
+import sampleVideo from "/my-video.mp4"; 
 
 const NavSection = () => {
   return (
